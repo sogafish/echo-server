@@ -8,4 +8,6 @@ RUN go mod init server \
     && go mod tidy \
     && go build
 
-CMD ["go", "run", "server.go"]
+RUN go get -u github.com/cosmtrek/air
+
+CMD ["air"]
